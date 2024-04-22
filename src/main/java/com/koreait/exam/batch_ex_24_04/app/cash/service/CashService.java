@@ -13,10 +13,10 @@ public class CashService {
 
     public CashLog addCash(Member member, long price, String eventType) {
         CashLog cashLog = CashLog.builder()
-                .member(member)
-                .price(price)
-                .eventType(eventType)
-                .build();
+            .member(member)
+            .price(price)
+            .eventType(eventType)
+            .build();
 
         cashRepository.save(cashLog);
 
