@@ -21,6 +21,7 @@ import java.util.List;
 @Profile("dev")
 @Slf4j
 public class DevInitData {
+<<<<<<< HEAD
 
     private boolean initDataDone = false;
 
@@ -31,6 +32,11 @@ public class DevInitData {
             if(initDataDone) return;
 
             initDataDone = true;
+=======
+    @Bean
+    public CommandLineRunner initData(MemberService memberService, ProductService productService, CartService cartService, OrderService orderService) {
+        return args -> {
+>>>>>>> parent of 9346949 (마이 프로덕트 백업)
 
             class Helper {
                 public Order order(Member member, List<ProductOption> productOptions) {
